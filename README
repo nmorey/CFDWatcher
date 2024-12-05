@@ -1,0 +1,18 @@
+Old and first big project written ~2004.
+This tool was used by hangglider (and some paraglier) pilots to analyse their
+GPS logs and find the best score possible in the french CFD challenge (see https://delta.ffvl.fr/cfd)
+
+Project was slightly cleaned up as of 2024 to:
+- support building against GTK 2.0 (instead of already dead GTK 1.2)
+- remove old personnal informations
+- a big reindent on everything. Uncrustify wasn't a thing back then :)
+- GPS direct reading has been disabled. Project used to half build gpsbabel within its sources
+  and pull the required bits. But the embedded GPS babel required completely obsolete USB libs
+  and as this is clearly a legacy/memory project, I haven't taken the time to update gpsbabel to its
+  latest release. (I don't even own a compatible GPS anymore).
+
+As I said, this is my first big C project, so please don't judge me too hard on the way too
+many global variables, the mismatch of naming styles, the very static memory allocations,
+all the extern stuff and a whole other bunch of horrors I haven't really looked at while resurecting
+the code. I started clearing up the code, but there's a lot of tuned messy and badly documented stuff
+that would take me way too long to figure out for it to be worth it (I'm looking at you weird TAB macro).
